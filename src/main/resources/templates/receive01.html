@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<meta charset="UTF-8">
+<title>受信側</title>
+</head>
+<body>
+<h1>データ受信</h1>
+<hr>
+名前：<span th:text="${name}"></span><br>
+年齢：<span th:text="${age}"></span><br>
+性別：<span th:text="${gender}"></span><br>
+好きな食べ物：
+<div th:if="${food != null}">
+	<ul th:each="data,num:${food}">
+		<li th:text="|${num.count}:${data}|"></li>
+		<li th:text="${num.count} + ':' + ${data}"></li>
+	</ul>
+</div>
+<br>
+
+日付：<span th:text="${cal}"></span><br>
+</body>
+</html>

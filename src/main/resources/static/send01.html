@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>送信側</title>
+</head>
+<body>
+<h1>データ送信</h1>
+<hr>
+<form action="/receive01" method="post">
+	名前：
+	<input type="text" name="NAME">
+	<br>
+	
+	年齢：
+	<input type="text" name="AGE">
+	<br>
+	
+	性別：
+	<input type="radio" name="GENDER" value="男性" checked>男性
+	<input type="radio" name="GENDER" value="女性">女性
+	<br>
+	
+	好きな食べ物：
+	<input type="checkbox" name="FOOD" value="ラーメン">ラーメン
+	<input type="checkbox" name="FOOD" value="うどん">うどん
+	<input type="checkbox" name="FOOD" value="そば">そば
+	<br>
+	
+	日付：
+	<input type="date" name="CAL">
+	<br>
+	
+	<input type="submit" value="送信">
+</form>
+</body>
+</html>

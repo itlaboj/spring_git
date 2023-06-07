@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
+<html xmlns:th="http://thymeleaf.org">
 <meta charset="UTF-8">
-<title>test02</title>
+<title>初めてのSpring</title>
 </head>
 <body>
 山田太郎<br>
-22歳
+23歳
+<hr>
+<select >
+	<option th:each="i : ${#numbers.sequence(1, 10)}"
+	th:value="${i}" th:text="|${i} 番|"></option>
+</select>
+
+<a th:href="@{'http://www.yahoo.co.jp'}" th:text="yahoo"></a>
 </body>
 </html>
