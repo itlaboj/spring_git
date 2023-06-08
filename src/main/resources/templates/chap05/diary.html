@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<meta charset="UTF-8">
+<title>日記システム</title>
+</head>
+<body>
+<h1>日記システム</h1>
+<hr>
+ユーザ名：[[${@user.name}]]　<a href="/diary">ログアウト</a>
+<hr>
+<form action="/regist" method="post">
+	タイトル：<br>
+	<input type="text" name="TITLE" placeholder="タイトルを入力">
+	<br>
+	内容：<br>
+	<textarea name="CONTENT"></textarea>
+	<br>
+	<input type="submit" value="書き込み">
+</form>
+
+<hr>
+
+<th:block th:if="${@diaryList.list}">
+	<table border="1">
+		<tr>
+			<th>タイトル</th><th>内容</th>
+		</tr>
+		<th:block th:each="diary : ${@diaryList.list}">
+			<tr>
+				<td>[[${diary.title}]]</td><td>[[${diary.content}]]</td>
+			</tr>
+		</th:block>
+	</table>
+</th:block>
+
+</body>
+</html>
