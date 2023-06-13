@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<meta charset="UTF-8">
+<title>データベース・アクセス</title>
+</head>
+<body>
+<h1>データベース・アクセス</h1>
+<hr>
+<table border="1">
+	<tr>
+		<th>コード</th><th>名前</th><th>年齢</th>
+	</tr>
+	
+	<tr th:each="customer : ${list}">
+		<td>[[${customer.code}]]</td>
+		<td>[[${customer.name}]]</td>
+		<td>[[${customer.age}]]</td>
+	</tr>
+</table>
+</body>
+</html>
