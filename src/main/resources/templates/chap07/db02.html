@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<meta charset="UTF-8">
+<title>データベース・アクセス</title>
+</head>
+<body>
+<h1>データベース・アクセス</h1>
+<hr>
+<th:block th:if="${customer}">
+	<table border="1">
+		<tr>
+			<th>コード</th><th>名前</th><th>年齢</th>
+		</tr>
+		
+		<tr>
+			<td>[[${customer.code}]]</td>
+			<td>[[${customer.name}]]</td>
+			<td>[[${customer.age}]]</td>
+		</tr>
+	</table>
+</th:block>
+
+<th:block th:unless="${customer}">
+	指定したコードのレコードがありません。<br>
+</th:block>
+
+</body>
+</html>
