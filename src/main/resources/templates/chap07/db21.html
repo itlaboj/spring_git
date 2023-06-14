@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<meta charset="UTF-8">
+<title>データベース・アクセス</title>
+</head>
+<body>
+<h1>データベース・アクセス</h1>
+<hr>
+<table border="1">
+	<tr>
+		<th>ID</th><th>カテゴリコード</th><th>カテゴリ名</th><th>商品名</th><th>単価</th>
+	</tr>
+	
+	<tr th:each="item : ${list}">
+		<td>[[${item.id}]]</td>
+		<td>[[${item.category.code}]]</td>
+		<td>[[${item.category.name}]]</td>
+		<td>[[${item.name}]]</td>
+		<td>[[${item.price}]]</td>
+	</tr>
+</table>
+</body>
+</html>
