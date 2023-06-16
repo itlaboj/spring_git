@@ -61,4 +61,9 @@ public class DiaryController {
 		
 		return "chap05/diary";
 	}
+	
+	@GetMapping("/test")
+	public String test() {
+		return "chap05/test";
+	}
 }
